@@ -12,6 +12,10 @@
 ## setup mongodb in kubernetes
 
 ```shell
+helm repo add bitnami https://charts.bitnami.com/bitnami
+```
+
+```shell
 helm upgrade --install mongodb bitnami/mongodb -n mongodb --set auth.username=root,auth.password=password,auth.database=accounts
 ```
 
