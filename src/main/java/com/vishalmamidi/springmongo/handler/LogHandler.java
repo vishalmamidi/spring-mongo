@@ -16,6 +16,6 @@ public class LogHandler {
         log.info("logging: {}", request);
         return ServerResponse.status(HttpStatus.ACCEPTED)
                 .contentType(APPLICATION_JSON)
-                .body(Mono.just("Awesome!, Deploy  Successfully.\ncurrent time:"+ java.time.LocalDateTime.now()), String.class);
+                .body(Mono.just("Awesome!, Spring Mongo Deploy Successfully.\ncurrent time:"+ java.time.LocalDateTime.now()), String.class);
     }
 }
