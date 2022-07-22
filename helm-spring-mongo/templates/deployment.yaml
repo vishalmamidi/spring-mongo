@@ -39,15 +39,15 @@ spec:
               containerPort: {{ .Values.image.containerPort}}
           livenessProbe:
             httpGet:
-              path: /
+              path: /actuator/health/liveness
               port: http
           readinessProbe:
             httpGet:
-              path: /
+              path: /actuator/health/readiness
               port: http
           env:
-          - name: MONGODB_URL
-            value: "localhost"
+          - name: MONGODB_HOST
+            value: "mongodb.mongodb.svc.cluster.local"
           
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
