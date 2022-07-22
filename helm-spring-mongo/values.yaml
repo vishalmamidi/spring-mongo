@@ -39,7 +39,6 @@ service:
   type: ClusterIP
   port: 8080
   name: spring-mongo
-  namespace: demo-namespace
 
 ingress:
   enabled: false
